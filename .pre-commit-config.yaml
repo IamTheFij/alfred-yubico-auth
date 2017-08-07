@@ -1,0 +1,26 @@
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: 1553c96e2a0d0154f3aca4c5cb0156a74a8c703d
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: autopep8-wrapper
+        exclude: ./src/vendor/.+
+        args:
+        - -i
+        - --ignore=E265,E309,E501
+    -   id: debug-statements
+        exclude: ./src/vendor/.+
+        language_version: python2.7
+    -   id: flake8
+        exclude: ./src/vendor/.+
+        language_version: python2.7
+    -   id: check-yaml
+    -   id: check-json
+    -   id: name-tests-test
+        exclude: tests/(common.py|util.py|(helpers)/(.+).py)
+-   repo: git://github.com/asottile/reorder_python_imports
+    sha: ab609b9b982729dfc287b4e75963c0c4de254a31
+    hooks:
+    -   id: reorder-python-imports
+        exclude: ./src/vendor/.+
+        language_version: python2.7
