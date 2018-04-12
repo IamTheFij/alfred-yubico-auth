@@ -13,8 +13,6 @@ from ykman.util import derive_key
 from ykman.util import parse_b32_key
 from ykman.util import TRANSPORT
 
-import vendor  # noqa
-
 NON_FEATURE_CAPABILITIES = [CAPABILITY.CCID, CAPABILITY.NFC]
 
 

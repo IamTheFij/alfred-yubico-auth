@@ -1,4 +1,4 @@
 #! /bin/bash
 
-echo "$1" > ./src/version
-plutil -replace version -string "$1" ./src/info.plist
+echo "$1" > ./alfred_yauth/version
+plutil -replace version -string "$1" ./info.plist

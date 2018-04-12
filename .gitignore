@@ -73,3 +73,4 @@ virtualenv_run/
 src/vendor/
 src/libusb-1.0.dylib
 *.pyc
+venv

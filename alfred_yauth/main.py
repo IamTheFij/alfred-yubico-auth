@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
 from getpass import getpass
@@ -108,7 +107,7 @@ class YubicoAuth(Workflow3):
         command_action = None
         if command == 'set-password':
             command_action = self.ask_yubikey_password
-        if command == 'list':
+        elif command == 'list':
             command_action = self.list_credentials
         else:
             command_action = self.refresh_credentials
