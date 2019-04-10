@@ -3,6 +3,7 @@ import sys
 from getpass import getpass
 from time import time
 
+from controller import APDUError
 from controller import Controller
 from controller import DeviceNotFoundError
 from workflow import ICON_ACCOUNT
@@ -38,8 +39,17 @@ class YubicoAuth(Workflow3):
     def ask_yubikey_password(self):
         """Prompts the user for their Yubikey password and stores it"""
         self.logger.debug('Set password')
-        password_key = self.get_controller().derive_key(getpass())
+        password_key = self.get_controller().derive_key(
+            getpass('Yubikey Password:')
+        )
         self.save_password(YUBIKEY_CREDS_KEYCHAIN, password_key)
+
+        self.get_controller().refresh_credentials(time(), password_key)
+        self.add_item(
+            'Yubikey password set successfully',
+            '',
+            icon=ICON_ACCOUNT,
+        )
 
     def get_yubikey_password(self):
         """Returns stored Yubikey password from keychain"""
@@ -120,6 +130,12 @@ class YubicoAuth(Workflow3):
                 'Is your Yubikey plugged in?',
                 icon=ICON_ERROR,
             )
+        except APDUError:
+            self.add_item(
+                'Could not communicate with device',
+                'Is your Yubikey password set correctly?',
+                icon=ICON_ERROR,
+            )
 
         self.send_feedback()
 
@@ -130,8 +146,7 @@ def no_wf():
     print(controller.count_devices())
     print(controller.refresh())
 
-    # TODO: Accept password in keychain, create special command for adding key
-    password = getpass('YubiKey password? ')
+    password = getpass('YubiKey password?')
     password_key = controller.derive_key(password)
     timestamp = time()
     print(controller.refresh_credentials(timestamp, password_key))
