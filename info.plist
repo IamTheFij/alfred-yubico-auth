@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.vividboarder.alfred-yubico-auth</string>
+	<string>com.iamthefij.alfred-yubico-auth</string>
 	<key>connections</key>
 	<dict>
-		<key>8486DCAA-AFB7-407D-A0E9-E57E09997B24</key>
+		<key>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -20,11 +20,36 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>A8D2CCAC-5CA4-495E-BB62-5C7F596FA157</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>94F60406-01FF-4991-A697-2C83147293EB</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8486DCAA-AFB7-407D-A0E9-E57E09997B24</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
 				<string>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Paste token</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -34,6 +59,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>DA3E9CE8-7C4F-4B09-BFA5-F8CA83297968</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A8D2CCAC-5CA4-495E-BB62-5C7F596FA157</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C252A5EC-1AEE-4EF4-864F-67483EAADCFA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -81,9 +119,22 @@
 				<false/>
 			</dict>
 		</array>
+		<key>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E86DC7C1-35C1-4BA9-8B33-A95DE7082F7E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
-	<string>ViViDboarder</string>
+	<string>Ian Fijolek</string>
 	<key>description</key>
 	<string>2FA for Yubikeys</string>
 	<key>disabled</key>
@@ -96,18 +147,69 @@
 			<key>config</key>
 			<dict>
 				<key>autopaste</key>
-				<false/>
+				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>9F48DDE6-BBE7-42ED-ABE5-C9255C92F1CD</string>
+			<string>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>yubikey</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./alfred-yubico-go</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Get 2FA tokens from Yubikey</string>
+				<key>title</key>
+				<string>Yubikey 2FA</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8486DCAA-AFB7-407D-A0E9-E57E09997B24</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -137,6 +239,8 @@
 				<false/>
 				<key>clipboardtext</key>
 				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -145,7 +249,39 @@
 			<key>uid</key>
 			<string>BFB3A122-52BB-4FF1-B5B3-CECD42A730DB</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>10</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>E86DC7C1-35C1-4BA9-8B33-A95DE7082F7E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9F48DDE6-BBE7-42ED-ABE5-C9255C92F1CD</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -171,79 +307,76 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>yubikey</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>./venv/bin/python -m alfred_yauth.main</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>main.py</string>
-				<key>subtext</key>
-				<string>Get 2FA tokens from Yubikey</string>
-				<key>title</key>
-				<string>Yubikey 2FA</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>set-password</string>
+						<key>outputlabel</key>
+						<string>Set password</string>
+						<key>uid</key>
+						<string>94F60406-01FF-4991-A697-2C83147293EB</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>8486DCAA-AFB7-407D-A0E9-E57E09997B24</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>seconds</key>
-				<string>10</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.delay</string>
-			<key>uid</key>
-			<string>E86DC7C1-35C1-4BA9-8B33-A95DE7082F7E</string>
+			<string>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<true/>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./alfred-yubico-go set-password</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</string>
+			<string>A8D2CCAC-5CA4-495E-BB62-5C7F596FA157</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Password key is now stored in your keychain</string>
+				<key>title</key>
+				<string>Password saved</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>C252A5EC-1AEE-4EF4-864F-67483EAADCFA</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -253,9 +386,16 @@
 		<key>0718204D-3398-4AEF-A621-DDDE1FC6ED75</key>
 		<dict>
 			<key>xpos</key>
-			<integer>960</integer>
+			<integer>990</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>145</integer>
+		</dict>
+		<key>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>245</integer>
 		</dict>
 		<key>8486DCAA-AFB7-407D-A0E9-E57E09997B24</key>
 		<dict>
@@ -267,37 +407,51 @@
 		<key>9F48DDE6-BBE7-42ED-ABE5-C9255C92F1CD</key>
 		<dict>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>415</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>235</integer>
+		</dict>
+		<key>A8D2CCAC-5CA4-495E-BB62-5C7F596FA157</key>
+		<dict>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>415</integer>
 		</dict>
 		<key>BFB3A122-52BB-4FF1-B5B3-CECD42A730DB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>780</integer>
+			<integer>810</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>145</integer>
+		</dict>
+		<key>C252A5EC-1AEE-4EF4-864F-67483EAADCFA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>595</integer>
+			<key>ypos</key>
+			<integer>420</integer>
 		</dict>
 		<key>DA3E9CE8-7C4F-4B09-BFA5-F8CA83297968</key>
 		<dict>
 			<key>xpos</key>
-			<integer>540</integer>
+			<integer>590</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>235</integer>
 		</dict>
 		<key>E86DC7C1-35C1-4BA9-8B33-A95DE7082F7E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>730</integer>
 			<key>ypos</key>
-			<integer>170</integer>
+			<integer>175</integer>
 		</dict>
 		<key>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</key>
 		<dict>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>455</integer>
 			<key>ypos</key>
-			<integer>290</integer>
+			<integer>60</integer>
 		</dict>
 	</dict>
 	<key>version</key>
