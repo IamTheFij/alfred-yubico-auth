@@ -33,7 +33,7 @@ func init() {
 func Build() error {
 	mg.Deps(cleanBuild)
 	fmt.Println("Building...")
-	err := sh.RunWith(info.Env(), "go", "build", "-o", buildDir+"/alfred-yubico-go", ".")
+	err := sh.RunWith(info.Env(), "go", "build", "-o", buildDir+"/alfred-yubico-auth", ".")
 	if err != nil {
 		return err
 	}
@@ -53,7 +53,7 @@ func Build() error {
 func Run() error {
 	mg.Deps(Build)
 	fmt.Println("Running...")
-	return sh.RunWith(info.Env(), buildDir+"/alfred-yubico-go")
+	return sh.RunWith(info.Env(), buildDir+"/alfred-yubico-auth")
 }
 
 // Dist packages workflow for distribution

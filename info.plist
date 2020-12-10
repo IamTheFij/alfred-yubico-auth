@@ -190,7 +190,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./alfred-yubico-go</string>
+				<string>./alfred-yubico-auth</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -342,7 +342,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./alfred-yubico-go set-password</string>
+				<string>./alfred-yubico-auth set-password</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -455,7 +455,7 @@
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>0.0.1</string>
+	<string>0.1.0</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
