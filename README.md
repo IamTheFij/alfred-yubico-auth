@@ -12,7 +12,11 @@ Currently this package depends on a fork of [yawn/ykoath](https://github.com/yaw
 
 Building requires [`mage`](https://magefile.org/)
 
-To see all targets and their descriptions, run `mage -l`.
+To see all targets and their descriptions, run `mage -l`. The most basic ones are as follows:
+
+* `mage install`: Build and install into your local machine for testing
+* `mage dist`: Build bundle for distribution
+
 
 ## Credits
 
