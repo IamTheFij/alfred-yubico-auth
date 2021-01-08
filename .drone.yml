@@ -1,0 +1,31 @@
+---
+kind: pipeline
+name: test
+
+steps:
+  - name: check
+    image: iamthefij/drone-pre-commit:personal
+
+---
+kind: pipeline
+name: notify
+
+depends_on:
+  - test
+
+trigger:
+  status:
+    - failure
+
+steps:
+
+  - name: notify
+    image: drillster/drone-email
+    settings:
+      host:
+        from_secret: SMTP_HOST  # pragma: whitelist secret
+      username:
+        from_secret: SMTP_USER  # pragma: whitelist secret
+      password:
+        from_secret: SMTP_PASS  # pragma: whitelist secret
+      from: drone@iamthefij.com

@@ -29,13 +29,14 @@ func init() {
 	}
 }
 
-// Build workflow
+// Build workflow.
 func Build() error {
 	mg.Deps(cleanBuild)
 	fmt.Println("Building...")
+
 	err := sh.RunWith(info.Env(), "go", "build", "-o", buildDir+"/alfred-yubico-auth", ".")
 	if err != nil {
-		return err
+		return fmt.Errorf("error building binary %w", err)
 	}
 
 	globs := build.Globs(
@@ -49,54 +50,62 @@ func Build() error {
 	return build.SymlinkGlobs(buildDir, globs...)
 }
 
-// Run workflow
+// Run workflow.
 func Run() error {
 	mg.Deps(Build)
 	fmt.Println("Running...")
+
 	return sh.RunWith(info.Env(), buildDir+"/alfred-yubico-auth")
 }
 
-// Dist packages workflow for distribution
+// Dist packages workflow for distribution.
 func Dist() error {
 	mg.SerialDeps(Clean, Build)
+
 	p, err := build.Export(buildDir, distDir)
 	if err != nil {
 		return err
 	}
+
 	fmt.Printf("Exported %q\n", p)
+
 	return nil
 }
 
-// Install symlinked workflow to Alfred
+// Install symlinked workflow to Alfred.
 func Install() error {
 	mg.Deps(Build)
 	fmt.Printf("Installing (linking) %q to %q...\n", buildDir, info.InstallDir)
+
 	if err := sh.Rm(info.InstallDir); err != nil {
-		return err
+		return fmt.Errorf("error cleaning previously installed workflow: %w", err)
 	}
+
 	return build.Symlink(info.InstallDir, buildDir, true)
 }
 
-// InstallHooks will install pre-commit hooks
+// InstallHooks will install pre-commit hooks.
 func InstallHooks() error {
 	return sh.RunV("pre-commit", "install", "--overwrite", "--install-hooks")
 }
 
-// Check will run all pre-commit hooks
+// Check will run all pre-commit hooks.
 func Check() error {
 	return sh.RunV("pre-commit", "run", "--all-files")
 }
 
-// Clean build files
+// Clean build files.
 func Clean() error {
 	fmt.Println("Cleaning...")
 	mg.Deps(cleanBuild, cleanMage)
+
 	return nil
 }
 
-// DistClean build files and distribution files
+// DistClean build files and distribution files.
 func DistClean() error {
 	mg.Deps(Clean, cleanDist)
+
 	return nil
 }
 
@@ -107,14 +116,15 @@ func cleanDir(name string) error {
 
 	infos, err := ioutil.ReadDir(name)
 	if err != nil {
-		return err
+		return fmt.Errorf("cleanDir could not read folder: %w", err)
 	}
 
 	for _, fi := range infos {
 		if err := sh.Rm(filepath.Join(name, fi.Name())); err != nil {
-			return err
+			return fmt.Errorf("cleanDir could not remove file: %w", err)
 		}
 	}
+
 	return nil
 }
 
