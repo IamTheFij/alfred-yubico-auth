@@ -74,3 +74,5 @@ src/vendor/
 src/libusb-1.0.dylib
 *.pyc
 venv
+static-builder
+fake_alfred_home/

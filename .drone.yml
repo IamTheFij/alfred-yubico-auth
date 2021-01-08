@@ -8,10 +8,61 @@ steps:
 
 ---
 kind: pipeline
+name: publish
+
+depends_on:
+  - test
+
+trigger:
+  event:
+    - push
+    - tag
+  refs:
+    - refs/heads/master
+    - refs/tags/v*
+
+steps:
+  - name: submodules
+    image: alpine/git
+    commands:
+      - git submodule init
+      - git submodule update --recursive --remote
+
+  - name: build
+    image: golang:1.15
+    commands:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libpcsclite-dev
+      # Download and install mage
+      - (cd $GOPATH && go get -u -d github.com/magefile/mage)
+      - (cd $GOPATH/src/github.com/magefile/mage && go run bootstrap.go)
+      # Build distribution bundle
+      - ./mage_fake_env.sh dist
+
+  - name: gitea release
+    image: plugins/gitea-release
+    settings:
+      title: ${DRONE_TAG}
+      files: dist/*
+      checksum:
+        - md5
+        - sha1
+        - sha256
+        - sha512
+      base_url:
+        from_secret: gitea_base_url
+      api_key:
+        from_secret: gitea_token
+    when:
+      event: tag
+
+---
+kind: pipeline
 name: notify
 
 depends_on:
   - test
+  - publish
 
 trigger:
   status:
