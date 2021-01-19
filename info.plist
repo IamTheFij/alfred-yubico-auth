@@ -6,11 +6,11 @@
 	<string>com.iamthefij.alfred-yubico-auth</string>
 	<key>connections</key>
 	<dict>
-		<key>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</key>
+		<key>0149DE47-0232-434D-BB9E-B2C0B419A2E3</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9F48DDE6-BBE7-42ED-ABE5-C9255C92F1CD</string>
+				<string>55DFD4B6-922A-4259-8625-EC14889FBACD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -18,6 +18,22 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>27BC434A-1663-44A7-85AF-C4AC6E1BEFB7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>A8D2CCAC-5CA4-495E-BB62-5C7F596FA157</string>
@@ -30,19 +46,44 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>8486DCAA-AFB7-407D-A0E9-E57E09997B24</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</string>
+				<string>0149DE47-0232-434D-BB9E-B2C0B419A2E3</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>Paste token</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>55DFD4B6-922A-4259-8625-EC14889FBACD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AD82ED59-033E-4860-B371-8128574E2FBC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>94F60406-01FF-4991-A697-2C83147293EB</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>506787F2-9A61-492C-8C49-30EE04FB70BC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8486DCAA-AFB7-407D-A0E9-E57E09997B24</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</string>
@@ -50,6 +91,16 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>27BC434A-1663-44A7-85AF-C4AC6E1BEFB7</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Paste code</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -71,7 +122,32 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>C252A5EC-1AEE-4EF4-864F-67483EAADCFA</string>
+				<string>DA99BA2E-7234-491D-BD0F-044151FA98E2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AD82ED59-033E-4860-B371-8128574E2FBC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>94F60406-01FF-4991-A697-2C83147293EB</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9F48DDE6-BBE7-42ED-ABE5-C9255C92F1CD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -98,6 +174,31 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E86DC7C1-35C1-4BA9-8B33-A95DE7082F7E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DA99BA2E-7234-491D-BD0F-044151FA98E2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C252A5EC-1AEE-4EF4-864F-67483EAADCFA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>94F60406-01FF-4991-A697-2C83147293EB</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>506787F2-9A61-492C-8C49-30EE04FB70BC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -146,21 +247,46 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>transient</key>
-				<true/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Password key is now stored in your keychain</string>
+				<key>title</key>
+				<string>Password saved</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</string>
+			<string>C252A5EC-1AEE-4EF4-864F-67483EAADCFA</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./alfred-yubico-auth -run-script set-password</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A8D2CCAC-5CA4-495E-BB62-5C7F596FA157</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -190,7 +316,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./alfred-yubico-auth</string>
+				<string>./alfred-yubico-auth list</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -208,6 +334,105 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>8486DCAA-AFB7-407D-A0E9-E57E09997B24</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:result}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>success</string>
+						<key>outputlabel</key>
+						<string>success</string>
+						<key>uid</key>
+						<string>94F60406-01FF-4991-A697-2C83147293EB</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>DA99BA2E-7234-491D-BD0F-044151FA98E2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>set-password</string>
+						<key>outputlabel</key>
+						<string>Set password</string>
+						<key>uid</key>
+						<string>94F60406-01FF-4991-A697-2C83147293EB</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>result_action</key>
+					<string>paste</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>27BC434A-1663-44A7-85AF-C4AC6E1BEFB7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -267,6 +492,61 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:result_action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>paste</string>
+						<key>outputlabel</key>
+						<string>paste</string>
+						<key>uid</key>
+						<string>94F60406-01FF-4991-A697-2C83147293EB</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>copy</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>AD82ED59-033E-4860-B371-8128574E2FBC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+./alfred-yubico-auth -run-script "$query"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0149DE47-0232-434D-BB9E-B2C0B419A2E3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -311,15 +591,15 @@
 				<array>
 					<dict>
 						<key>inputstring</key>
-						<string>{var:action}</string>
+						<string>{var:result}</string>
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>set-password</string>
+						<string>success</string>
 						<key>outputlabel</key>
-						<string>Set password</string>
+						<string>success</string>
 						<key>uid</key>
 						<string>94F60406-01FF-4991-A697-2C83147293EB</string>
 					</dict>
@@ -330,32 +610,9 @@
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</string>
+			<string>55DFD4B6-922A-4259-8625-EC14889FBACD</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>./alfred-yubico-auth set-password</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>A8D2CCAC-5CA4-495E-BB62-5C7F596FA157</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -363,18 +620,18 @@
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<false/>
+				<true/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Password key is now stored in your keychain</string>
+				<string>{query}</string>
 				<key>title</key>
-				<string>Password saved</string>
+				<string>Alfred Yubikey Error</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>C252A5EC-1AEE-4EF4-864F-67483EAADCFA</string>
+			<string>506787F2-9A61-492C-8C49-30EE04FB70BC</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -383,75 +640,117 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0149DE47-0232-434D-BB9E-B2C0B419A2E3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>180</integer>
+			<key>ypos</key>
+			<integer>305</integer>
+		</dict>
 		<key>0718204D-3398-4AEF-A621-DDDE1FC6ED75</key>
 		<dict>
 			<key>xpos</key>
-			<integer>990</integer>
+			<integer>1245</integer>
 			<key>ypos</key>
-			<integer>145</integer>
+			<integer>225</integer>
+		</dict>
+		<key>27BC434A-1663-44A7-85AF-C4AC6E1BEFB7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>155</integer>
 		</dict>
 		<key>2D69982A-0DB6-4ABA-812F-C7F2A73650AE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>270</integer>
+			<integer>365</integer>
 			<key>ypos</key>
-			<integer>245</integer>
+			<integer>90</integer>
+		</dict>
+		<key>506787F2-9A61-492C-8C49-30EE04FB70BC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>540</integer>
+			<key>ypos</key>
+			<integer>455</integer>
+		</dict>
+		<key>55DFD4B6-922A-4259-8625-EC14889FBACD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>365</integer>
+			<key>ypos</key>
+			<integer>330</integer>
 		</dict>
 		<key>8486DCAA-AFB7-407D-A0E9-E57E09997B24</key>
 		<dict>
 			<key>xpos</key>
-			<integer>120</integer>
+			<integer>70</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>65</integer>
 		</dict>
 		<key>9F48DDE6-BBE7-42ED-ABE5-C9255C92F1CD</key>
 		<dict>
 			<key>xpos</key>
-			<integer>415</integer>
+			<integer>605</integer>
 			<key>ypos</key>
-			<integer>235</integer>
+			<integer>320</integer>
 		</dict>
 		<key>A8D2CCAC-5CA4-495E-BB62-5C7F596FA157</key>
 		<dict>
 			<key>xpos</key>
-			<integer>390</integer>
+			<integer>515</integer>
 			<key>ypos</key>
-			<integer>415</integer>
+			<integer>55</integer>
+		</dict>
+		<key>AD82ED59-033E-4860-B371-8128574E2FBC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>485</integer>
+			<key>ypos</key>
+			<integer>285</integer>
 		</dict>
 		<key>BFB3A122-52BB-4FF1-B5B3-CECD42A730DB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>810</integer>
+			<integer>1065</integer>
 			<key>ypos</key>
-			<integer>145</integer>
+			<integer>225</integer>
 		</dict>
 		<key>C252A5EC-1AEE-4EF4-864F-67483EAADCFA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>595</integer>
+			<integer>800</integer>
 			<key>ypos</key>
-			<integer>420</integer>
+			<integer>45</integer>
 		</dict>
 		<key>DA3E9CE8-7C4F-4B09-BFA5-F8CA83297968</key>
 		<dict>
 			<key>xpos</key>
-			<integer>590</integer>
+			<integer>780</integer>
 			<key>ypos</key>
-			<integer>235</integer>
+			<integer>320</integer>
+		</dict>
+		<key>DA99BA2E-7234-491D-BD0F-044151FA98E2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>670</integer>
+			<key>ypos</key>
+			<integer>75</integer>
 		</dict>
 		<key>E86DC7C1-35C1-4BA9-8B33-A95DE7082F7E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>730</integer>
+			<integer>985</integer>
 			<key>ypos</key>
-			<integer>175</integer>
+			<integer>255</integer>
 		</dict>
 		<key>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</key>
 		<dict>
 			<key>xpos</key>
-			<integer>455</integer>
+			<integer>605</integer>
 			<key>ypos</key>
-			<integer>60</integer>
+			<integer>185</integer>
 		</dict>
 	</dict>
 	<key>version</key>
