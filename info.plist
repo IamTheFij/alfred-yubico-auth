@@ -836,23 +836,37 @@
 			<key>ypos</key>
 			<integer>75</integer>
 		</dict>
+		<key>DB934647-74DE-4182-ACDF-93C629AA99D9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
 		<key>E86DC7C1-35C1-4BA9-8B33-A95DE7082F7E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>985</integer>
+			<integer>1015</integer>
 			<key>ypos</key>
-			<integer>255</integer>
+			<integer>330</integer>
+		</dict>
+		<key>F3AEDAF9-44BC-4E39-B908-724974ACA17B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>655</integer>
+			<key>ypos</key>
+			<integer>160</integer>
 		</dict>
 		<key>FB0DDF80-FF90-439A-BF3F-6EC58C2AA870</key>
 		<dict>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>650</integer>
 			<key>ypos</key>
-			<integer>185</integer>
+			<integer>285</integer>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.1.0</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
