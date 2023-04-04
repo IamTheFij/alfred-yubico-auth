@@ -73,6 +73,7 @@ func Run() error {
 // Dist packages workflow for distribution.
 func Dist() error {
 	mg.SerialDeps(Clean, Build)
+	fmt.Println("Exporting dist...")
 
 	p, err := build.Export(buildDir, distDir)
 	if err != nil {
