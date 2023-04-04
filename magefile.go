@@ -42,12 +42,60 @@ func init() {
 	}
 }
 
+func CompileBinaryForArch(goos, goarch, outputPath string) error {
+	env := info.Env()
+	if goos != "" {
+		env["GOOS"] = goos
+	}
+	if goarch != "" {
+		env["GOARCH"] = goarch
+	}
+
+	err := sh.RunWith(env, "go", "build", "-o", outputPath, ".")
+	if err != nil {
+		return fmt.Errorf("error building %s %s binary %w", goos, goarch, err)
+	}
+
+	return nil
+}
+
+func CompileUniversalBinary() error {
+	armPath := filepath.Join(buildDir, "alfred-yubico-auth_arm64")
+	// amdPath := filepath.Join(buildDir, "alfred-yubico-auth_amd64")
+
+	// NOTE: Universal binaries can't be compiled because we can't cross compile against the scard
+	// libraries due to missing headers
+	if err := CompileBinaryForArch("darwin", "arm64", armPath); err != nil {
+		return fmt.Errorf("error compiling universal binary %w", err)
+	}
+
+	/*
+	 * if err := CompileBinaryForArch("darwin", "amd64", amdPath); err != nil {
+	 * 	return fmt.Errorf("error compiling universal binary %w", err)
+	 * }
+	 */
+
+	if err := sh.RunWith(
+		info.Env(),
+		"lipo",
+		"-create",
+		"-output",
+		binPath,
+		armPath,
+		// amdPath,
+	); err != nil {
+		return fmt.Errorf("failed combining binaries to universal %w", err)
+	}
+
+	return nil
+}
+
 // Build workflow.
 func Build() error {
 	mg.Deps(cleanBuild)
 	fmt.Println("Building...")
 
-	if err := sh.RunWith(info.Env(), "go", "build", "-o", binPath, "."); err != nil {
+	if err := CompileUniversalBinary(); err != nil {
 		return fmt.Errorf("error building binary %w", err)
 	}
 
