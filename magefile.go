@@ -13,18 +13,31 @@ import (
 	"github.com/magefile/mage/sh"
 )
 
-var (
-	info     *build.Info
+const (
 	buildDir = "./build"
 	distDir  = "./dist"
+	binName  = "alfred-yubico-auth"
+)
+
+var (
+	info *build.Info
 
 	// Default mage target
 	Default = Run
+
+	// Output binary path
+	binPath = filepath.Join(buildDir, binName)
 )
+
+func InfoWithVersion(v int) build.Option {
+	return func(i *build.Info) {
+		i.AlfredMajorVersion = v
+	}
+}
 
 func init() {
 	var err error
-	if info, err = build.NewInfo(); err != nil {
+	if info, err = build.NewInfo(InfoWithVersion(5)); err != nil {
 		panic(err)
 	}
 }
@@ -34,8 +47,7 @@ func Build() error {
 	mg.Deps(cleanBuild)
 	fmt.Println("Building...")
 
-	err := sh.RunWith(info.Env(), "go", "build", "-o", buildDir+"/alfred-yubico-auth", ".")
-	if err != nil {
+	if err := sh.RunWith(info.Env(), "go", "build", "-o", binPath, "."); err != nil {
 		return fmt.Errorf("error building binary %w", err)
 	}
 
@@ -55,7 +67,7 @@ func Run() error {
 	mg.Deps(Build)
 	fmt.Println("Running...")
 
-	return sh.RunWith(info.Env(), buildDir+"/alfred-yubico-auth")
+	return sh.RunWith(info.Env(), binPath)
 }
 
 // Dist packages workflow for distribution.
